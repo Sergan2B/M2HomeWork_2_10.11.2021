@@ -51,16 +51,22 @@ public class Main {
         //d1.draw();
         //cat1.draw();
         System.out.println();
-        String object1A = createObject();
+        Animal object1A = createObject();
         System.out.println("________");
-        String object1B = createObject();
+        Animal object1B = createObject();
         System.out.println("________");
-        String object1C = createObject();
+        Animal object1C = createObject();
         System.out.println("________");
+        System.out.println(object1A.print());
+        System.out.println(object1B.print());
+        System.out.println(object1C.print());
     }
-    public static String createObject() {
+    public static Animal createObject() {
         Scanner enterName, enterNumber;
         String name = null;
+        Dog dog_1;
+        Cat cat_1;
+        Horse horse_1;
         enterName =  new Scanner(System.in);
         enterNumber = new Scanner(System.in);
         System.out.println("Выбери число от 1 до 3. \nЧисло 1 создать собаку. \nЧисло 2 создать кота. \nЧисло 3 создать лошадь.");
@@ -69,23 +75,23 @@ public class Main {
             case 1:
                 System.out.println("Введите имя объекта");
                 name = enterName.next();
-                Dog dog_1 = new Dog(name);
+                dog_1 = new Dog(name);
                 dog_1.print();
-                break;
+                return dog_1;
             case 2:
                 System.out.println("Введите имя объекта");
                 name = enterName.next();
-                Cat cat_1 = new Cat(name);
+                cat_1 = new Cat(name);
                 cat_1.print();
-                break;
+                return cat_1;
             case 3:
                 System.out.println("Введите имя объекта");
                 name = enterName.next();
-                Horse horse_1 = new Horse(name);
+                horse_1 = new Horse(name);
                 horse_1.print();
-                break;
+                return horse_1;
         }
-        return name;
+        return createObject();
     }
 }
 

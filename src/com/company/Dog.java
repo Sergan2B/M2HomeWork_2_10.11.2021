@@ -16,8 +16,9 @@ public class Dog extends Animal{
     }
 
     @Override
-    public void print() {
+    public boolean print() {
         System.out.println("Информация об объекте с класса собаки: \nОбъект является собакой с именем " + getName() + ".\nИздает звук \"гав-гав\". " +
                 "\nСобака выглядит вот так \uD83D\uDC15");
+        return false;
     }
 }

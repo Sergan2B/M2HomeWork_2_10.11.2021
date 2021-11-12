@@ -16,8 +16,9 @@ public class Cat extends Animal{
     }
 
     @Override
-    public void print() {
+    public boolean print() {
         System.out.println("Информация об объекте с класса кота: \nОбъект является котом с именем " + getName() + ".\nИздает звук \"мяуу\". " +
                 "\nКот выглядит вот так \uD83D\uDC15");
+        return false;
     }
 }
